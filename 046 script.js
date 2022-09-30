@@ -79,3 +79,6 @@ const obj = {
 };
 
 obj.sayNumber();
+
+const double = (a) => a * 2;
+console.log(double(2));
