@@ -16,3 +16,6 @@ for (let i = 0; i < 100000000; i++) {
 let end = new Date();
 
 alert(`Cicle worked in ${end - start} miliseconds`);
+function salut() {
+  alert("salut Sofia!");
+}
