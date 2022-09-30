@@ -97,15 +97,21 @@ window.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  modalCloseBtn.addEventListener("click", () => {
+  function closeModalWindow() {
     modalWindow.classList.toggle("show");
     document.body.style.overflow = "";
-  });
+  }
+  modalCloseBtn.addEventListener("click", closeModalWindow);
 
   modalWindow.addEventListener("click", (e) => {
     if (e.target === modalWindow) {
-      modalWindow.classList.toggle("show");
-      document.body.style.overflow = "";
+      closeModalWindow();
+    }
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.code === "Escape" && modalWindow.classList.contains("show")) {
+      closeModalWindow();
     }
   });
 });
